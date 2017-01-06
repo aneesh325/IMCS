@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+ <script>
+     
+     //Zipcode Validation
+       var zcode = document.getElementById("ZIPCode");
+    	if (zcode.length != 5 || zcode.length != 9) {
+	        alert("Please Enter 5 or 9 Digit Zipcode");
+	        //return false;
+    	}
+           
+            function validate() {
+            //    var x = document.forms["index1.html"]["ZIPCode"]; //.getElementById("ZIPCode").value;
+                
+                var x = document.getElementById("ZIPCode")
+                
+                if(x.length == 4 || x.length == 9)
+                {
+                 
+                    alert"check";
+                }    
+                
+                
+                //document.getElementById("sumTd").innerHTML = x + y;
+
+        </script>
+  
+</head>
+
+<body>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<div class="container">
+  <div id="Checkout" class="inline">
+      <h1>Payment</h1><br><br>
+   
+      <form>
+          <div class="form-group">
+              <label for="PaymentAmount">Payment amount</label>
+              <div class="amount-placeholder">
+                  <span>$</span>
+                  <span>500.00</span>
+              </div>
+          </div>
+          <div class="form-group">
+              <label or="NameOnCard">Name on card</label>
+              <input required id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+          </div>
+          <div class="form-group">
+              <label for="CreditCardNumber">Card number</label>
+              <input required id="CreditCardNumber" class="null card-image form-control" type="text" onkeypress="return event.charCode >=48 && event.charCode <= 57"></input>
+          </div>
+          <div class="expiry-date-group form-group">
+              <label for="ExpiryDate">Expiry date</label>
+              <input id="ExpiryDate" class="form-control" type= "date" min ="2017-01-05" required></input>
+          </div>
+          <div class="security-code-group form-group">
+              <label for="SecurityCode">Security code</label>
+              <div class="input-container" >
+                  <input required id="SecurityCode" class="form-control" type="text" ></input>
+                  <i id="cvc" class="fa fa-question-circle"></i>
+              </div>
+              <div class="cvc-preview-container two-card hide">
+                  <div class="amex-cvc-preview"></div>
+                  <div class="visa-mc-dis-cvc-preview"></div>
+              </div>
+          </div>
+          <div class="zip-code-group form-group">
+              <label for="ZIPCode">ZIP/Postal code</label>
+              <div class="input-container">
+                  <input required id="ZIPCode" class="form-control" type="text"></input>
+                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus"><i class="fa fa-question-circle"></i></a>
+              </div>
+          </div>
+          <button id="PayButton" class="btn btn-block btn-info submit-button" type="submit" onclick="validate()">
+                            <span class="align-middle">Pay $500.00</span>
+          </button>
+      </form>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html> 

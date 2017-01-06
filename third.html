@@ -1,0 +1,103 @@
+<html>
+<header>
+        <script>
+            var student = {
+                sno: 3, 
+                name: "Yo", 
+                marks: 130.00,
+                          }
+            
+            
+            function addStudent() {
+                var table = document.getElementById("studentTbl");
+                var row = table.insertRow(1);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                // Add some text to the new cells:
+                alert(student.sno);
+                cell1.innerHTML = student.sno; 
+                cell2.innerHTML = student.name; 
+                cell3.innerHTML = student.marks;
+            }
+            
+            function newStudent() {
+                var x = document.getElementById("firstTxt").value;
+                var y = document.getElementById("secondTxt").value;
+                var z = document.getElementById("thirdTxt").value;
+                
+                var table = document.getElementById("studentTbl");
+                var row = table.insertRow(1);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                // Add some text to the new cells:
+                alert(x);
+                cell1.innerHTML = x; 
+                cell2.innerHTML = y; 
+                cell3.innerHTML = z;
+                
+    //            document.getElementById("sumTd").innerHTML = x + y;
+            }
+            
+            
+        </script>
+    
+    </header>
+
+<body>
+    <table border="1" style="color:blue" id="studentTbl">
+            <tr>
+                <th>sno</th>
+                <th>name</th>
+                <th>marks</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>Aneesh</td>
+                <td>44.34</td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>Andy</td>
+                <td>41.34</td>
+                
+            </tr>
+        </table>
+        
+        <br />
+            <button name="Add Student by object" onclick="addStudent()">Add Student</button>
+
+        <div>
+            <table id="addStu">
+                <tr>
+                    <td> Enter sno:  </td>
+                    <td> <input id="firstTxt" />  </td>
+                </tr>
+                
+                <tr>
+                    <td> Enter name:  </td>
+                    <td> <input id="secondTxt" />  </td>
+                </tr>
+                 <tr>
+                    <td> Enter marks:  </td>
+                    <td> <input id="thirdTxt" />  </td>
+                </tr>
+                
+                <tr>
+                    <td> <button onclick="newStudent()">Add Student dynamically</button></td>
+                    <td id="sumTd"> </td>
+                </tr>
+            </table>
+        </div>
+        
+    
+    </body>
+
+</html>
